@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/styles.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import BlogContainer from '../styles/BlogsStyles';
+import styled from "styled-components";
 
 //IMAGES
 import mffImg1 from '../images/tvshowarray.png';
@@ -18,9 +19,13 @@ import mffImg10 from '../images/returned movies.png';
 import mffImg11 from '../images/bad movies.png';
 import mffImg12 from '../images/recap.png';
 
+const MapFindFilterBLog = styled.div`
+    ${BlogContainer}
+`;
+
 function MapFindFilter() {
     return (
-        <div className="mapfindfilter-blog">
+        <MapFindFilterBLog>
             <div className="mapfindfilter">
             <Link to="/"><button className="allblogsTopBtn"><FontAwesomeIcon className="circleArrow" icon={faArrowAltCircleLeft}/>All Posts</button></Link>
             <h1>Javascript map(), find(), and filter()</h1>
@@ -84,7 +89,7 @@ function MapFindFilter() {
                 <a href="https://www.buymeacoffee.com/devcoder2" target="_blank" rel="noopener noreferrer" ><img className="buy-coffee" src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png"/></a>
             </div>
             <Link to="/"><button className="allblogsBtn"><FontAwesomeIcon className="circleArrow" icon={faArrowAltCircleLeft}/>All Posts</button></Link>
-        </div>
+        </MapFindFilterBLog>
     )
 }
 

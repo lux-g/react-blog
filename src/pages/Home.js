@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../components/Nav';
 import Blog from '../components/Blog';
-import DarkModeToggle from '../components/DarkModeToggle';
+import styled from "styled-components";
 
 //IMAGES
 import MoonImg from '../images/moon.png';
@@ -9,11 +9,20 @@ import IntersectionImg from '../images/intersection.png';
 import FindImg from '../images/find.png';
 
 
+const IndexContainer = styled.div`
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 900px) {
+        flex-direction: column;
+    } 
+`;
 
 function Home() {
     return (
-        <div className="index-container">
-            <DarkModeToggle/>
+        <IndexContainer>
+            
             <Nav/>
             <div className="main-blogs">
                 <Blog
@@ -41,7 +50,7 @@ function Home() {
                     readLink="/MapFindFilter"
                 />
             </div>
-        </div>
+        </IndexContainer>
     )
 }
 

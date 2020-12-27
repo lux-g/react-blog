@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/styles.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import BlogContainer from '../styles/BlogsStyles';
+import styled from "styled-components";
 
 //IMAGES
 import intersectionImg1 from '../images/setvariable.png';
@@ -19,9 +20,13 @@ import intersectionImg11 from '../images/animcss.png';
 import intersectionImg12 from '../images/intersection-else.png';
 import intersectionImg13 from '../images/intersection ob.png';
 
+const IntersectionBlog = styled.div`
+    ${BlogContainer}
+`;
+
 function IntersectionObserver() {
     return (
-        <div className="intersection-blog">
+        <IntersectionBlog>
             <div className="intersection">
                 <Link to="/"><button className="allblogsTopBtn"><FontAwesomeIcon className="circleArrow" icon={faArrowAltCircleLeft}/>All Posts</button></Link>
                 <h1>Intersection Observer Animations</h1>
@@ -102,7 +107,7 @@ function IntersectionObserver() {
                 <a href="https://www.buymeacoffee.com/devcoder2" target="_blank" rel="noopener noreferrer" ><img className="buy-coffee" src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png"/></a>
             </div>
             <Link to="/"><button className="allblogsBtn"><FontAwesomeIcon className="circleArrow" icon={faArrowAltCircleLeft}/>All Posts</button></Link>
-        </div>
+        </IntersectionBlog>
     )
 }
 

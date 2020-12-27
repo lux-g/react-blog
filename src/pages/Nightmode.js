@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/styles.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import BlogContainer from '../styles/BlogsStyles';
+import styled from "styled-components";
 
 //IMAGES
 import nightModeImgOne from '../images/root.png';
@@ -14,9 +15,14 @@ import nightModeImgSix from '../images/ifcurrenttheme.png';
 import nightModeImgSeven from '../images/else.png';
 import nightModeImgEight from '../images/fullnightmodecode.png';
 
+
+const NightModeBlog = styled.div`
+    ${BlogContainer}
+`;
+
 function Nightmode() {
     return (
-        <div className="night-mode-blog">
+        <NightModeBlog>
             <div className="nightmode">
                 <Link to="/"><button className="allblogsTopBtn"><FontAwesomeIcon className="circleArrow" icon={faArrowAltCircleLeft}/>All Posts</button></Link>
                 <h1>Night Mode Toggle with CSS & Javascript</h1>
@@ -87,7 +93,7 @@ function Nightmode() {
                 <a href="https://www.buymeacoffee.com/devcoder2" target="_blank" rel="noopener noreferrer" ><img className="buy-coffee" src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png"/></a>
             </div>
             <Link to="/"><button className="allblogsBtn"><FontAwesomeIcon className="circleArrow" icon={faArrowAltCircleLeft}/>All Posts</button></Link>
-        </div>
+        </NightModeBlog>
     )
 }
 
